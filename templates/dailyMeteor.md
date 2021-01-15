@@ -1,5 +1,3 @@
-{: id="20210113192050-7tndnxe"}
-
 {{ $ppath := nospace (cat "https://gitee.com/zhangjlsjtu/pic/raw/master/picture/diary"  ((randInt 1 4) | toString) ".jpg") }}
 {: id="20210113192100-rgvegn6"}
 
@@ -32,13 +30,21 @@
 ## 🎉️历史待完
 {: id="20210113192100-jqlx35n"}
 
-!{{select * from blocks where markdown like '%[ ]%' and type = 'l' LIMIT 3}}
+!{{select * from blocks where markdown like '%[ ]%' and type = 'l' LIMIT 2}}
 {: id="20210113192100-6tbm7yh"}
 
 ## 🚴随机复习
 {: id="20210113192100-d7asy70"}
 
-!{{SELECT * FROM blocks ORDER BY random() LIMIT 3}}
+> 随机展示1篇文档
+> {: id="20210115152633-zt12z2y"}
+{: id="20210115152627-bx13el8"}
+
+!{{SELECT * FROM blocks where type = 'd' ORDER BY random() LIMIT 1}}
+{: id="20210115153032-f4ln8vu"}
+
+{: id="20210115153032-6m8tbe9"}
+
 {: id="20210113192100-wf069w6"}
 
 
