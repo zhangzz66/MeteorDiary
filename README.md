@@ -12,7 +12,7 @@
 
 ### 新增截图：
 
-**daily：**基本日记模板，可与其他模板组合
+**daily：** 基本日记模板，可与其他模板组合
 
 ![daily](https://gitee.com/zhangjlsjtu/pic/raw/master/picture/daily.png)
 
