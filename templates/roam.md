@@ -8,7 +8,7 @@
 > {: id="20210117205515-8p7rsx9"}
 {: id="20210117205436-61dcsj6"}
 
-!{{SELECT * FROM blocks where type = 'd' and path not LIKE '%{{.title}}%' ORDER BY random() LIMIT 1}}
+!{{SELECT * FROM blocks where type = 'd' and root_id != '{{.id}}' ORDER BY random() LIMIT 1}}
 {: id="20210117204827-z8lk3kf"}
 
 {: id="20210117205434-qw4rjly"}

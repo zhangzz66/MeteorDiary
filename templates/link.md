@@ -1,18 +1,13 @@
-{{ $block:= (sql "select * from blocks where type='d' and content='{{.title}}' ") }}
-{{ $blocks:=split " " ((first $block)|toString)}}
-{{$myID:=(trunc -22 $blocks._0)}}
-{: id="20210129211237-309dq0t"}
-
-## 🏷 链接“ {{.title}}”的内容
+## 🏷 **链接“ {{.title}}”的内容**{: style="background-image: linear-gradient(to right, var(--b3-theme-primary), var(--b3-theme-error)); -webkit-background-clip: text; color: transparent;"}
 {: id="20210129211237-b25zmo0"}
 
-!{{SELECT * FROM blocks WHERE markdown LIKE '%{{$myID}}%' and path not LIKE '%{{.title}}%'}}
-{: id="20210129211237-jh17cgr"}
+!{{SELECT * FROM blocks WHERE markdown LIKE '%{{.id}}%' and root_id != '{{.id}}'}}
+{: id="20210129211237-jh17cgr" updated="20210222212835"}
 
-## 🏷 提及“ {{.title}}”的内容
+## 🏷 **提及“ {{.title}}”的内容**{: style="background-image: linear-gradient(to right, var(--b3-theme-primary), var(--b3-theme-error)); -webkit-background-clip: text; color: transparent;"}
 {: id="20210117201946-iesarol"}
 
-!{{SELECT * FROM blocks WHERE content LIKE '%{{.title}}%' and path not LIKE '%{{.title}}%' and markdown not LIKE '%{{$myID}}%'}}
+!{{SELECT * FROM blocks WHERE content LIKE '%{{.title}}%' and root_id != '{{.id}}' and markdown not LIKE '%{{.id}}%'}}
 {: id="20210129211237-bmqibm2"}
 
 
