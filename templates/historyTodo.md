@@ -8,8 +8,8 @@
 > {: id="20210117174348-sb8dow5"}
 {: id="20210117174346-yrb35qv"}
 
-!{{select * from blocks where markdown like '%[ ]%' and type = 'l' and root_id != '{{.id}}' LIMIT 10}}
-{: id="20210117173702-t5ifomh"}
+!{{select * from blocks where markdown like '%[ ]%' and type = 'l' and root_id != '{{.id}}' order by created DESC limit 3}}
+{: id="20210117173702-t5ifomh" updated="20210226144333"}
 
 {: id="20210129213944-djjsf1y"}
 
