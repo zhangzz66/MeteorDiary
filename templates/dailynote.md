@@ -1,4 +1,4 @@
-{{ $ppath := nospace (cat "D:/Files/backup/notes/long/assets/"  ((randInt 1 6) | toString) ".png") }}
+{{ $ppath := nospace (cat "https://gitee.com/zhangjlsjtu/pic/raw/master/picture/diary"  ((randInt 1 4) | toString) ".jpg") }}
 {: id="20210111161552-0vrsj2e"}
 
 {{$after := (div ((toDate "2006-01-02" "2021-05-05").Sub now).Hours 24)}}
