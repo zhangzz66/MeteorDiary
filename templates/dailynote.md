@@ -50,8 +50,8 @@ text
 > {: id="20210117174348-sb8dow5"}
 {: id="20210117174346-yrb35qv"}
 
-!{{select * from blocks where markdown like '%[ ]%' and type = 'l' and root_id != '{{.id}}' order by created DESC limit 3}}
-{: id="20210117173702-t5ifomh" updated="20210226144333"}
+!{{select * from blocks where markdown like '%[ ]%' and type = 'l' and path not like '%{{.title}}%' order by created DESC limit 4}}
+{: id="20210117173702-t5ifomh" updated="20210228155939"}
 
 {{$dayleft := (div ((toDate "2006-01-02" "2022-01-01").Sub now).Hours 24)}}
 {: id="20210226144120-msdamtc"}
@@ -63,8 +63,8 @@ text
 > {: id="20210117205515-8p7rsx9" updated="20210226144045"}
 {: id="20210117205436-61dcsj6"}
 
-!{{SELECT * FROM blocks where type = 'd' and root_id != '{{.id}}' and path not like '%daily%' ORDER BY random() LIMIT 1}}
-{: id="20210117204827-z8lk3kf"}
+!{{SELECT * FROM blocks where type = 'd' and path not like '%{{.title}}%' ORDER BY random() LIMIT 1}}
+{: id="20210117204827-z8lk3kf" updated="20210228160037"}
 
 {: id="20210226143756-lb5ob5h"}
 
