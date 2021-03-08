@@ -1,5 +1,5 @@
-{{ $ppath := nospace (cat "https://gitee.com/zhangjlsjtu/pic/raw/master/picture/diary" ((randInt 1 4) | toString) ".jpg")}}
-{: id="20210114214719-tsvh1d9"}
+{{ $ppath := nospace (cat "https://b3logfile.com/siyuan/assets/pic" ((randInt 1 32) | toString) ".png")}}
+{: id="20210114214719-tsvh1d9" updated="20210306234628"}
 
 {{$week := add (mod (div ((toDate "2006-01-02" "2050-03-13").Sub now).Hours 24) 7) 1}}
 {: id="20210115135134-466hl9y"}

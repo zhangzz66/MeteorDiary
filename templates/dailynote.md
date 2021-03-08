@@ -1,8 +1,11 @@
-{{ $ppath := nospace (cat "https://gitee.com/zhangjlsjtu/pic/raw/master/picture/diary"  ((randInt 1 4) | toString) ".jpg") }}
-{: id="20210111161552-0vrsj2e"}
+{{ $ppath := nospace (cat "https://b3logfile.com/siyuan/assets/pic" ((randInt 1 32) | toString) ".png")}}
+{: id="20210111161552-0vrsj2e" updated="20210306234743"}
 
 {{$after := (div ((toDate "2006-01-02" "2021-05-05").Sub now).Hours 24)}}
 {: id="20210111214945-sepmjl0" updated="20210226135036"}
+
+{{$dayleft := (div ((toDate "2006-01-02" "2022-01-01").Sub now).Hours 24)}}
+{: id="20210306230559-iohvs02" updated="20210306230600"}
 
 {{$week := add (mod (div ((toDate "2006-01-02" "2050-03-13").Sub now).Hours 24) 7) 1}}
 {: id="20210113013412-ougpydf"}
@@ -34,13 +37,11 @@
 > {: id="20210226143451-q5cvb7c"}
 {: id="20210226143218-hebhyss" updated="20210226143451"}
 
-text
 {: id="20210226143641-owbh20s" updated="20210226143735"}
 
 ## 📝 ((20210217233336-3akpqfr "Notes"))-{{now | date "01/02"}}
 {: id="20210224203954-lr7fja6" updated="20210226143637"}
 
-text
 {: id="20210118002650-89v936m" updated="20210226143725"}
 
 ## 🎉️ 历史待办
@@ -50,14 +51,11 @@ text
 > {: id="20210117174348-sb8dow5"}
 {: id="20210117174346-yrb35qv"}
 
-!{{select * from blocks where markdown like '%[ ]%' and type = 'l' and path not like '%{{.title}}%' order by created DESC limit 4}}
+!{{select * from blocks where markdown like '%[ ]%' and created <'{{now | date "20060102"}}'and type = 'l' order by created DESC limit 4}}
 {: id="20210117173702-t5ifomh" updated="20210228155939"}
 
-{{$dayleft := (div ((toDate "2006-01-02" "2022-01-01").Sub now).Hours 24)}}
-{: id="20210226144120-msdamtc"}
-
 ## 🚴 随机复习
-{: id="20210117204808-yqws8cs" updated="20210226143819"}
+{: id="20210226144120-msdamtc" updated="20210306230630"}
 
 > 距离 `2022-01-01` 还剩 `{{$dayleft}}` 天，加油！
 > {: id="20210117205515-8p7rsx9" updated="20210226144045"}
