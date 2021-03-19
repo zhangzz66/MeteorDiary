@@ -11,7 +11,7 @@
 {{range $i,$v:=$doc}}
 {: id="20210308215217-6yepp8t"}
 
-### {{add $i 1}}. 📑 (({{$v.ID}} "{{$v.Content}}")):{{range $ii,$vv :=$parent}} {{if eq $vv.Path $v.Path }}   (({{$vv.ID}} "{{substr 0 20 $vv.Content}}")) {{end}}{{end}}{{end}}
+### {{add $i 1}}. 📑 (({{$v.ID}} "{{$v.Content}}")):{{range $ii,$vv :=$parent}} {{if eq $vv.Path $v.Path }}   (({{$vv.ID}} "{{substr 0 31 $vv.Content}}")) {{end}}{{end}}{{end}}
 {: id="20210308163842-987rbbh"}
 
 
