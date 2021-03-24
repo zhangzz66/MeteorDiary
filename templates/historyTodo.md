@@ -8,7 +8,7 @@
 > {: id="20210117174348-sb8dow5"}
 {: id="20210117174346-yrb35qv"}
 
-!{{select * from blocks where markdown like '%[ ]%' and created <'{{now | date "20060102"}}'and type = 'l' order by created DESC limit 4}}
+!{{select * from blocks where created <'{{now | date "20060102"}}' and subtype = 't' and type = 'l' order by created DESC limit 4}}
 {: id="20210117173702-t5ifomh" updated="20210306231439"}
 
 {: id="20210129213944-djjsf1y"}
