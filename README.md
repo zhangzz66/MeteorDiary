@@ -4,7 +4,7 @@
 
 
 
-## v0.8 add `todo` template![image.png](https://cdn.nlark.com/yuque/0/2021/png/12649687/1620578786986-654f2863-ccd1-42e2-b0c2-2caeef322605.png#clientId=uf7604ac5-c216-4&from=paste&height=540&id=ua8de02d7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1079&originWidth=1672&originalType=binary&size=1708829&status=done&style=none&taskId=u1317dea4-62f2-4982-bb7f-4dbd228e789&width=836)
+## v0.8 add `todo`,`twoCol`,`threeCol`,`fourCol` templates![image.png](https://cdn.nlark.com/yuque/0/2021/png/12649687/1620578786986-654f2863-ccd1-42e2-b0c2-2caeef322605.png#clientId=uf7604ac5-c216-4&from=paste&height=540&id=ua8de02d7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1079&originWidth=1672&originalType=binary&size=1708829&status=done&style=none&taskId=u1317dea4-62f2-4982-bb7f-4dbd228e789&width=836)
 
 
 
