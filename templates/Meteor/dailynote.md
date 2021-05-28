@@ -38,7 +38,7 @@
 > 截止至 `.action{now | date "2006-01-02 15:04"} .action{last (slice (list "星期六" "星期五" "星期四" "星期三" "星期二" "星期一" "星期天") 0 $week )}`
 
 
-{{select * from blocks where markdown like '%[ ]%' and created <'{{now | date "20060102"}}'and type = 'l' order by created DESC limit 4}}
+{{SELECT * FROM blocks WHERE (id in (select parent_id from blocks where type !='l' ) and type='i' and subtype = 't' and markdown like '%[ ]%') and root_id !='.action{.id}' order by created DESC limit 15}}
 
 
 ## 🚴 随机复习
