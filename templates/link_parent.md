@@ -1,0 +1,7 @@
+.action{/* It seems variables like .alias and .name doesn't work in SiYuan 1.2   */}
+## 🏷 **链接“ .action{.title}”的内容**
+
+{{SELECT * FROM blocks WHERE (id in (select parent_id from blocks where markdown like '%.action{.id}%' and type='p') and type='i') or (id in (select parent_id from blocks where markdown like '%.action{.id}%' and type!='l' and type !='i') ) and root_id !='.action{.id}' order by created DESC}}
+## 🏷 **提及“ .action{.title}”的内容**
+
+{{SELECT * FROM blocks WHERE (type='i' and id in (SELECT parent_id FROM blocks WHERE type='p' and (content LIKE '%.action{.title}%' or name LIKE '%.action{.title}%' or alias LIKE '%.action{.title}%' or ('.action{.alias}' !='' and content LIKE '%.action{.alias}%') or ('.action{.alias}' !='' and name LIKE '%.action{.alias}%') or ('.action{.alias}' !='' and alias LIKE '%.action{.alias}%'))) and markdown not LIKE '%.action{.id}%') or ( type !='l' and type != 'i' and id in (SELECT parent_id FROM blocks WHERE (content LIKE '%.action{.title}%' or name LIKE '%.action{.title}%' or alias LIKE '%.action{.title}%' or ('.action{.alias}' !='' and content LIKE '%.action{.alias}%') or ('.action{.alias}' !='' and name LIKE '%.action{.alias}%') or ('.action{.alias}' !='' and alias LIKE '%.action{.alias}%'))  ) and markdown not LIKE '%.action{.id}%' )and root_id !='.action{.id}' order by created DESC}}
